@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha1",
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "scripts": {
+    "start": "lite-server"
+  },
+  "name": "professional-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
