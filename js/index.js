@@ -1,25 +1,29 @@
-if (innerWidth > '768px') {
-   const portfolio_nav = document.querySelector('#portfolio_nav');
-portfolio_nav.style.display = 'none'
-console.log(9);
-}
-   
 
-document.querySelector('.navbar-toggler-icon').addEventListener('click', (e) => {
-   // Get the navbar toggle button icon element
-   const navbarToggleIcon = document.querySelector('button.navbar-toggler span.navbar-toggler-icon');
-   
-   const portfolio_nav = document.querySelector('ul');
-   portfolio_nav.classList.add('d')
 
-   
+let iconState = false;
 
-//  navbarToggleIcon.style.backgroundImage='url(https://static.vecteezy.com/system/resources/previews/009/267/401/original/minus-sign-icon-free-png.png)'
-
+document.querySelector('.navbar-toggler').addEventListener('click', (e) => {
+   const navbarToggleIcon = document.querySelector('.navbar-toggler-icon');
   
    
+   if (!iconState) {
+      navbarToggleIcon.style.backgroundImage = 'url(https://static.vecteezy.com/system/resources/previews/009/267/401/original/minus-sign-icon-free-png.png)';
+      document.querySelector('nav ul').style.setProperty('display', 'flex', 'important');
+
+   } else if (iconState) {
+      navbarToggleIcon.style.backgroundImage = 'url("data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 30 30\'%3e%3cpath stroke=\'rgba(255, 255, 255, 0.55)\' stroke-linecap=\'round\' stroke-miterlimit=\'10\' stroke-width=\'2\' d=\'M4 7h22M4 15h22M4 23h22\'/%3e%3c/svg%3e")';
+      document.querySelector('nav ul').style.setProperty('display', 'none', 'important');
+
+   }
+
+   
+   iconState = !iconState;
+
+
+ 
+
+
+  
 })
-
-
-
+ 
 
