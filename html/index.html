@@ -5,21 +5,21 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
    <!-- bootstrap -->
    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
    <!-- css -->
-   <!-- <link rel="stylesheet" href="../css/style.css"> -->
+   <link rel="stylesheet" href="../css/style.css">
+   <!-- Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
    <title>Jack Almadjian</title>
    <style>
-      .carousel {
 
-         height: 35vh;
-         position: relative;
-         overflow: hidden;
-         bottom: 0;
-      }
 
-      .carousel-height {}
+
    </style>
 </head>
 
@@ -36,12 +36,18 @@
                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse d-flex" id="portfolio_nav">
-               <ul class="navbar-nav mb-lg-0 d-md-none">
+               <ul class="navbar-nav mb-lg-0 flex-column flex-md-row text-center d-md-none">
                   <li class="nav-item">
                      <a class="nav-link" aria-current="page" href="#">About Me</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#">Skills</a>
+                     <a class="nav-link" href="#">Skills and projects</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="#">Resume</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="#">Contact</a>
                   </li>
                </ul>
             </div>
@@ -49,43 +55,75 @@
       </div>
    </nav>
 
-   <div class="carousel-height">
-      <div class="carousel p-2 d-block m-auto" id="carouselExampleIndicators">
-         <div class="carousel-indicators bg-info">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-               aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-               aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-               aria-label="Slide 3"></button>
-         </div>
 
-         <div class="carousel-inner">
-            <div class="carousel-inner active">
-               <img src="../images/carousel1.png" class="w-100" alt="">
-            </div>
-            <div class="carousel-item">
-               <img src="../images/carousel2.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-               <img
-                  src="http://store-images.s-microsoft.com/image/apps.32357.14618985536919905.4b30e4f3-f7a1-4421-840c-2cc97b10e8e0.6e7a96f1-33ad-4447-8e2b-7de730f9a05e"
-                  class="d-block" alt="...">
-
-            </div>
-         </div>
-         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-         </button>
-         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-         </button>
+   <div class="carousel slide p-2 d-block col-11 col-md-12 h-50 m-auto" id="Portfolio_carousel" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+         <button type="button" data-bs-target="#Portfolio_carousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+         <button type="button" data-bs-target="#Portfolio_carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+         <button type="button" data-bs-target="#Portfolio_carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
+      <div class="carousel-inner">
+         <div class="carousel-item active">
+            <div class="carousel-caption top-0">
+               <h3>“The journey of a thousand miles begins with a single step.“</h3>
+               <h4>- Lao Tzu</h4>
+            </div>
+            <img src="../images/carousel1.png" class="d-block w-100" alt="...">
+         </div>
+         <div class="carousel-item">
+            <div class="carousel-caption top-0">
+               <h3>“When we strive to become better than we are, everything around us becomes better too.”</h3>
+               <h4>-Paulo Coelho</h4>
+            </div>
+            <img src="../images/carousel2.png" class="d-block w-100" alt="...">
+         </div>
+         <div class="carousel-item">
+            <div class="carousel-caption top-0">
+               <h3>“The moment you doubt whether you can fly, you cease for ever to be able to do it.”</h3>
+               <h4>- J. M. Barrie, Peter Pan</h4>
+            </div>
+            <img src="../images/carousel3.png" class="d-block" alt="...">
 
+         </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#Portfolio_carousel" data-bs-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#Portfolio_carousel" data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
+         <button class="btn btn-primary btn-sm" id="Portfolio_carousel_pause_play_function">
+            <i class="fa fa-pause"></i>
+         </button>
+      </button>
+   </div>
+
+
+
+
+
+   <div class="row col-11">
+      <div class="card w-100 m-auto">
+         <div class="card-body">
+            <h5 class="card-title text-center">About Me</h5>
+            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde saepe obcaecati nostrum
+               voluptatem? Aspernatur inventore mollitia maxime debitis harum excepturi quos at porro autem! Quisquam
+               cumque nostrum eveniet ipsum inventore excepturi quidem sapiente deleniti quibusdam. Qui nulla culpa
+               praesentium consectetur impedit esse odit eaque, dolores deleniti tenetur error at nesciunt.</p>
+            <a href="https://samplesite1.net/resume.docx" class="btn btn-primary m-a d-block">Resume
+               <span class="visually-hidden">
+                  <small>(download)</small>
+               </span>
+            </a>
+         </div>
+      </div>
+      <div class="card w-50">
+         <div class="card-body">
+            <img src="" alt="img_profile">
+         </div>
+      </div>
    </div>
 
 
@@ -93,18 +131,19 @@
 
 
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
-   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+   <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+   <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
    <script src="../js/index.js"></script>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script>
+   <script src="../js/carousel.js"></script>
 
-
-   </script>
 
 
 </body>
