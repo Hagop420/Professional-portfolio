@@ -4,15 +4,14 @@
    box-sizing: border-box;
 }
 
-.C{
-   padding:50px
+
+body{
+   background-color: lightblue;
 }
 
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
+ 
+
+
 
 #Portfolio_carousel_background{
    background-color:blanchedalmond;
@@ -86,5 +85,5 @@ opacity:1 !important
 
 @media(max-width:768px){
    .carousel-caption h3,h4{font-size: 15px;}
-   
+   /* .nav-item{display:flex} */
 }
