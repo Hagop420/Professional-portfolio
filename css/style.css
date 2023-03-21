@@ -5,7 +5,15 @@
 }
 
 
-.carousel{
+body{
+   background-image: url('../images/background-image.gif');
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+}
+
+.card{
+   margin-top: 20vh;
 }
 
 
