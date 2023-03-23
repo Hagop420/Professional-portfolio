@@ -1,6 +1,9 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* fonts */
+
 
 
 *{
@@ -11,14 +14,12 @@
 
 
 body{
-   background-image: url('../images/background-image.gif');
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
+ background: lightgoldenrodyellow;
 }
 
 .card{
    margin-top: 10vh;
+   border:0
 }
 
 
@@ -60,9 +61,120 @@ body{
 
  /* card */
  .card{
-   background:hwb(0 76% 24%);
+   background:none;
    
  }
 
- .card-title{font-family: 'Ubuntu', sans-serif;
+ .card-header{
+   border:0;
+   background: none;
  }
+
+ .card-header h5{
+   max-width:150px;
+   background-color: yellow;
+   border-radius: .5rem;
+   padding: 10px;
+   font-style: italic;
+  
+ }
+
+ .card-body{
+   color:hwb(356 0% 0% / 0.884)
+ }
+
+ .card img{
+   height:400px;
+   margin: auto;
+ }
+
+ .row .card-title{font-family: 'Ubuntu', sans-serif;
+ }
+
+ #skills .card-title{font-family: 'Roboto', sans-serif;
+ }
+
+ #skills{
+   padding-top: 10vh;
+}
+
+#skills .card-header{
+   background: hwb(60 91% 6%);
+   margin: auto;
+   bottom: 10px;
+   padding: 5px;
+   border-radius: .5rem;
+   border-bottom: 1.3px solid #000;
+   
+}
+
+#skills .card-title{
+   background:#000;
+   border-bottom: .2px solid rgb(58, 8, 8);
+   position: relative;
+   bottom: 12px;
+   color:yellow;
+   border-radius: .3rem;
+   padding:10px;
+   font-size: 20px;
+   font-style: italic;
+   letter-spacing: .1rem;
+   
+ }
+
+ /* #skills .card-body{
+   border-top:1.3px solid rgb(219, 210, 210) ;
+ } */
+ @media(min-width:768px){
+   .card-body{
+      font-size: 16.5px;
+   }
+   .card-header h5{max-width:250px; }
+ }
+ @media(max-width:768px){
+   .card-body{
+      font-size: 18px;
+   }
+   #skills{
+      padding-top: 5vh;
+   }
+ 
+ }
+
+
+
+
+ 
+ div.tooltip-item {
+   /* width: 450px;
+   height: 100px; */
+   /* border: 1px solid black; */
+   border-radius: 8px;
+   /* margin: 60px 10px; */
+ }
+ 
+ .tooltip-item {
+   /* position: relative; */
+   cursor: pointer;
+ }
+ 
+ .tooltip-item:after {
+   content: attr(data-message);
+   position: absolute;
+   z-index: 99999999;
+   color:yellow;
+   /* left: 105%; */
+   white-space: nowrap;
+   display: none;
+   font-size: 1.2rem;
+   background-color: rgba(14, 15, 15, 0.6);
+   padding: 10px 20px;
+   border-radius: 16px;
+   font-family: Tahoma, Verdana, Segoe, sans-serif;
+   font-weight: normal;
+ }
+
+ .accordion-item{
+  border-bottom:solid .5px #000
+ }
+
