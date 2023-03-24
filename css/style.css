@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto&display=swap');
 /* fonts */
 
 
@@ -48,6 +50,10 @@ body{
    background-clip:none;
    height:.2rem;
    width:.2rem
+ }
+
+ .carousel img[src^='carousel1']{
+  display: none;
  }
 
 
@@ -129,6 +135,10 @@ body{
    .card-body{
       font-size: 16.5px;
    }
+   .tooltip-item:after{
+    opacity:0;
+    display: none;
+   }
    .card-header h5{max-width:250px; }
  }
  @media(max-width:768px){
@@ -140,21 +150,42 @@ body{
    }
  
  }
+ 
+ @media(min-width:992px){
+   .accordion_two{
+     margin-top: 15.5vh;
+   }
+   .accordion-title{
+    font-style: italic;
+    letter-spacing: 3px;
+   }
+   
+}
+ /* @media(min-width:1200px){
+  .accordion_two{
+    margin-left: 10vh;
+    transition: 1s all ease-in-out;
+  }
+
+}
+ @media(max-width:1200px) and (min-width:992px) and (max-width:768px){
+  .accordion_two{
+    margin-left: 0vh;
+    transition: 1s all ease-in-out;
+  }
+
+} */
 
 
 
 
  
  div.tooltip-item {
-   /* width: 450px;
-   height: 100px; */
-   /* border: 1px solid black; */
    border-radius: 8px;
-   /* margin: 60px 10px; */
- }
- 
- .tooltip-item {
-   /* position: relative; */
+   position: relative;
+  }
+  
+  .tooltip-item {
    cursor: pointer;
  }
  
@@ -162,19 +193,49 @@ body{
    content: attr(data-message);
    position: absolute;
    z-index: 99999999;
+   text-align: center;
    color:yellow;
-   /* left: 105%; */
-   white-space: nowrap;
    display: none;
-   font-size: 1.2rem;
+   font-size: 1rem;
    background-color: rgba(14, 15, 15, 0.6);
    padding: 10px 20px;
    border-radius: 16px;
    font-family: Tahoma, Verdana, Segoe, sans-serif;
    font-weight: normal;
  }
+ .accordion{
+  --bs-accordion-btn-icon-width:1.8rem
+ }
 
+
+ .accordion button > span{
+color:#000
+ }
+
+ .accordion-title{
+  font-family: 'Montserrat', sans-serif;
+  padding:10px;
+  font-weight: bold;
+ }
  .accordion-item{
   border-bottom:solid .5px #000
  }
+ .accordion-body{
+  background: rgba(85, 126, 231, 0.503);
+ }
+ .accordion-button::after{
+  background-image: url('../images/accordion-down.svg');
+  animation: arrow-transit 1s infinite forwards ease-in-out;
 
+ }
+
+  .accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed{
+    border-radius: .3rem;
+    background: lavenderblush;
+  }
+
+
+  @keyframes arrow-transit{
+    50%{transform: translateY(2px);}
+    100%{transform: translateY(0px);}
+   }

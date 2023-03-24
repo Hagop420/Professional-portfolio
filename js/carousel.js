@@ -1,33 +1,34 @@
-document.addEventListener("DOMContentLoaded", function() {
-   var carousel = document.querySelector(".carousel");
-   var pausePlayFunctionallity = document.querySelector("#Portfolio_carousel_pause_play_function");
-   var carouselPausePlayIcon = pausePlayFunctionallity.children[0];
- 
-   var interval = 2000;
-   var pause = false;
- 
-   var carouselInterval = setInterval(function() {
-     if (!pause) {
-       carousel.nextElementSibling.click();
-     }
-   }, interval);
- 
-   pausePlayFunctionallity.addEventListener("click", function() {
-     if (carouselPausePlayIcon.classList.contains("fa-pause")) {
-       clearInterval(carouselInterval);
-       pause = true;
-       carouselPausePlayIcon.classList.remove("fa-pause");
-       carouselPausePlayIcon.classList.add("fa-play");
-     } else {
-       carouselInterval = setInterval(function() {
-         if (!pause) {
-           carousel.nextElementSibling.click();
-         }
-       }, interval);
-       pause = false;
-       carouselPausePlayIcon.classList.remove("fa-play");
-       carouselPausePlayIcon.classList.add("fa-pause");
-     }
-   });
- });
+document.addEventListener("DOMContentLoaded", () => {
+  var carousel = document.querySelector(".carousel");
+  var pausePlayButton = document.querySelector("#Portfolio_carousel_pause_play_function");
+  var pausePlayIcon = pausePlayButton.querySelector("i");
+  var isPaused = false;
+
+  // initialize the carousel
+  var carouselInstance = new bootstrap.Carousel(carousel, {
+    interval: 4800,
+    pause: "false"
+  });
+
+  pausePlayButton.addEventListener("click", function() {
+    if (pausePlayIcon.classList.contains("fa-pause")) {
+      carouselInstance.pause();
+      pausePlayIcon.classList.remove("fa-pause");
+      pausePlayIcon.classList.add("fa-play");
+    } else {
+      carouselInstance.cycle();
+      pausePlayIcon.classList.remove("fa-play");
+      pausePlayIcon.classList.add("fa-pause");
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
  
