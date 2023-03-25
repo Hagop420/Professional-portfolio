@@ -54,9 +54,8 @@ body{
    width:.2rem
  }
 
- .carousel img[src^='carousel1']{
-  display: none;
- }
+
+ 
 
 
  .carousel-control-prev-icon{
