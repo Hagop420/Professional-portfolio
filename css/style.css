@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 /* fonts */
 
 
@@ -148,6 +150,16 @@ body{
    #skills{
       padding-top: 5vh;
    }
+   #Fundamentals-tab-pane img,
+   #Front-end-UI-tab-pane img{
+    height:550px;
+    margin: .3rem;
+   }
+   h3.tab-title{
+    font-size: 22.5px;
+    font-style: italic;
+    font-weight: 800;
+   }
  
  }
  
@@ -158,6 +170,15 @@ body{
    .accordion-title{
     font-style: italic;
     letter-spacing: 3px;
+   }
+   h3.tab-title{
+    font-style: italic;
+    font-weight: 800;
+   }
+   #Fundamentals-tab-pane img,
+   #Front-end-UI-tab-pane img{
+   height:580px !important;
+   margin:0 !important
    }
    
 }
@@ -225,7 +246,6 @@ color:#000
  }
  .accordion-button::after{
   background-image: url('../images/accordion-down.svg');
-  animation: arrow-transit 1s infinite forwards ease-in-out;
 
  }
 
@@ -235,16 +255,19 @@ color:#000
   }
 
 
-  @keyframes arrow-transit{
-    50%{transform: translateY(2px);}
-    100%{transform: translateY(0px);}
-   }
 
 #nucamp-tab-pane p{
   font-size: 16px;
   min-width:350px;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: .1rem;
+}
+h3.tab-title{
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .4rem;
+  font-weight: bolder;
+  padding:10px
 }
 
 #nucamp-tab-pane p::first-letter{
@@ -257,4 +280,22 @@ color:#000
    #Front-end-UI-tab-pane img{
     height:400px;
     box-shadow: 8px 10px .3rem #888888;
+   }
+
+   #Fundamentals-tab-pane img:hover,
+   #Front-end-UI-tab-pane img:hover{
+   transform:scale(1.1);
+   transition:1s all ease-in-out
+   }
+
+  .nucamp-link{
+    width: 100px;
+    background: red;
+    /* margin: 20px ; */
+  }
+
+   .nucamp-link:hover{
+    opacity: .8;
+    transform:scale(1.1);
+    transition:1s all ease-in-out
    }
