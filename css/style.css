@@ -239,3 +239,22 @@ color:#000
     50%{transform: translateY(2px);}
     100%{transform: translateY(0px);}
    }
+
+#nucamp-tab-pane p{
+  font-size: 16px;
+  min-width:350px;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: .1rem;
+}
+
+#nucamp-tab-pane p::first-letter{
+  font-size: 200%;
+  color: #8A2BE2;
+}
+
+
+   #Fundamentals-tab-pane img,
+   #Front-end-UI-tab-pane img{
+    height:400px;
+    box-shadow: 8px 10px .3rem #888888;
+   }

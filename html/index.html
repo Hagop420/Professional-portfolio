@@ -6,6 +6,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+   <!-- title icon -->
+   <link rel="icon" href="../images/logo.png">
 
    <!-- bootstrap -->
    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -443,6 +445,46 @@
 
 
 
+      <div class="card col-8 m-5 p-4">
+         <ul class="nav nav-tabs" id="sliders" role="tablist">
+            <li class="nav-item" role="presentation">
+               <button class="nav-link active" id="nucamp-tab" data-bs-toggle="tab" data-bs-target="#nucamp-tab-pane"
+                  type="button" role="tab" aria-controls="nucamp-tab-pane" aria-selected="true">Nucamp coding
+                  Bootcamp</button>
+
+            </li>
+            <li class="nav-item" role="presentation">
+               <button class="nav-link" id="Fundamentals-tab" data-bs-toggle="tab"
+                  data-bs-target="#Fundamentals-tab-pane" type="button" role="tab" aria-controls="Fundamentals-tab-pane"
+                  aria-selected="false">Web Development
+                  Fundamentals</button>
+            </li>
+            <li class="nav-item" role="presentation">
+               <button class="nav-link" id="Front-end-UI-tab" data-bs-toggle="tab"
+                  data-bs-target="#Front-end-UI-tab-pane" type="button" role="tab" aria-controls="Front-end-UI-tab-pane"
+                  aria-selected="false">Front end / Mobile
+                  Development</button>
+            </li>
+         </ul>
+         <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active col-12" id="nucamp-tab-pane" role="tabpanel"
+               aria-labelledby="nucamp-tab" tabindex="0">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sit velit voluptatem
+                  ut quae
+                  perspiciatis, quibusdam laboriosam deserunt recusandae adipisci ducimus modi qui vero aliquid quidem?
+                  Totam, iste, rem doloremque pariatur praesentium eum, blanditiis porro reiciendis quaerat laudantium
+                  quae! Culpa beatae nemo voluptates mollitia, numquam officia quia labore ex quasi?</p>
+            </div>
+            <div class="tab-pane fade m-2" id="Fundamentals-tab-pane" role="tabpanel" aria-labelledby="Fundamentals-tab"
+               tabindex="0">
+               <img src="../images/Web-fundamentals-1.png" alt="Web_fundamentals_cert.">
+            </div>
+            <div class="tab-pane fade m-2" id="Front-end-UI-tab-pane" role="tabpanel" aria-labelledby="Front-end-UI-tab"
+               tabindex="0">
+               <img src="../images/Front-end-certificate-1.png" alt="Front-end/UI_cert.">
+            </div>
+
+         </div>
 
 
 
@@ -452,58 +494,62 @@
 
 
 
-      <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
-      <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-      <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-      <script src="../js/carousel.js"></script>
-      <script src="../js/index.js"></script>
 
-      <div style="margin-bottom:1000px"></div>
 
-      <script>
-         /**
-   * Attaches a tooltip to every element in the result-set.
-    
-   * @param { string } selector - An CSS-selector.
-   * @param { number } horizontalOffset - Horizontal
-   *   distance to the mouse pointer.
-   * @param { number } VerticalOffset - Vertical distance
-   *   to the mouse pointer.
-   *
-   * All parameter are optional. But providing a valid
-   *   selector is indispensable for the function to work.
-   * 
-   * Usage example: 
-   *   ... })('.tooltip-item', 10, 5);
-   */
-         (function (selector, horizontalOffset, verticalOffset) {
-            var items;
 
-            selector = selector || '.tooltip';
-            horizontalOffset = horizontalOffset || 5;
-            verticalOffset = verticalOffset || 5;
+         <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+         <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+         <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-            items = document.querySelectorAll(selector);
-            items = Array.prototype.slice.call(items);
+         <script src="../js/carousel.js"></script>
+         <script src="../js/index.js"></script>
 
-            items.forEach(function (item) {
-               // Every time the pointer moves over the element the 
-               //  CSS-rule in overwritten with new values for 
-               //  top and left.
-               item.addEventListener('mousemove', function (e) {
-                  let countCssRules = document.styleSheets[0].cssRules.length;
-                  let newRule = selector +
-                     ':hover:after { display: block; ' +
-                     'left: ' + (e.offsetX + horizontalOffset) + 'px; ' +
-                     'top: ' + (e.offsetY + verticalOffset) + 'px; }';
+         <div style="margin-bottom:1000px"></div>
 
-                  document.styleSheets[0].insertRule(newRule, countCssRules);
+         <script>
+            /**
+      * Attaches a tooltip to every element in the result-set.
+       
+      * @param { string } selector - An CSS-selector.
+      * @param { number } horizontalOffset - Horizontal
+      *   distance to the mouse pointer.
+      * @param { number } VerticalOffset - Vertical distance
+      *   to the mouse pointer.
+      *
+      * All parameter are optional. But providing a valid
+      *   selector is indispensable for the function to work.
+      * 
+      * Usage example: 
+      *   ... })('.tooltip-item', 10, 5);
+      */
+            (function (selector, horizontalOffset, verticalOffset) {
+               var items;
+
+               selector = selector || '.tooltip';
+               horizontalOffset = horizontalOffset || 5;
+               verticalOffset = verticalOffset || 5;
+
+               items = document.querySelectorAll(selector);
+               items = Array.prototype.slice.call(items);
+
+               items.forEach(function (item) {
+                  // Every time the pointer moves over the element the 
+                  //  CSS-rule in overwritten with new values for 
+                  //  top and left.
+                  item.addEventListener('mousemove', function (e) {
+                     let countCssRules = document.styleSheets[0].cssRules.length;
+                     let newRule = selector +
+                        ':hover:after { display: block; ' +
+                        'left: ' + (e.offsetX + horizontalOffset) + 'px; ' +
+                        'top: ' + (e.offsetY + verticalOffset) + 'px; }';
+
+                     document.styleSheets[0].insertRule(newRule, countCssRules);
+                  });
                });
-            });
-         })('.tooltip-item', 10, 5);
+            })('.tooltip-item', 10, 5);
 
-      </script>
+         </script>
 
 </body>
 
